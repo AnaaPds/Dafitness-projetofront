@@ -1,0 +1,197 @@
+header {
+    background: linear-gradient(to right, #007BFF, #1A84F4);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 2em;
+}
+
+
+.logo{
+    max-width: 200px;
+}
+
+.header li{
+    margin-left: 30px;
+}
+
+@media (max-width: 375px) {
+    body {
+        font-size: 14px; /* Fonte menor para smartphones */
+    }
+
+    h1, h2 {
+        font-size: 1.4em; /* Reduz tamanho dos títulos */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .form-add {
+        flex-direction: column; /* Reorganiza os campos em coluna */
+        gap: 10px; /* Espaço entre os campos */
+        width: 100%; /* Formulário ocupa toda a largura */
+        padding: 10px;
+    }
+
+    .form-add input,
+    .form-add select,
+    .form-add button {
+        width: 100%; /* Campos ocupam toda a largura */
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 12px; /* Fonte menor */
+        width: 100%; /* Tabela ocupa toda a largura da tela */
+        overflow-x: auto; /* Habilita a rolagem horizontal */
+    }
+
+    th, td {
+        padding: 8px; /* Reduz o espaço interno */
+    }
+
+    table img {
+        width: 15px; /* Ícones menores */
+        height: 15px;
+    }
+}
+
+/* Media Query para telas entre 376px e 667px */
+@media (min-width: 376px) and (max-width: 667px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.6em; /* Títulos um pouco maiores */
+    }
+
+    .form-add {
+        flex-direction: row; /* Campos lado a lado */
+        flex-wrap: wrap; /* Ajusta os campos para caberem na tela */
+        gap: 10px;
+    }
+
+    .form-add input,
+    .form-add select {
+        flex: 1 1 48%; /* Campos ocupam 48% da largura */
+    }
+
+    button {
+        flex: 1 1 100%; /* Botão ocupa toda a largura */
+    }
+
+    table {
+        font-size: 14px; /* Fonte levemente maior */
+        width: 100%; /* Tabela ocupa toda a largura da tela */
+        overflow-x: auto; /* Habilita a rolagem horizontal */
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    table img {
+        max-width: 20px;
+    }
+}
+
+/* Para Celulares (até 480px de largura) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Fonte menor */
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+        text-align: center; /* Centraliza o título */
+    }
+
+    .form-add {
+        flex-direction: column; /* Campos em coluna */
+        gap: 10px; /* Espaçamento entre campos */
+    }
+
+    .form-add input,
+    .form-add select,
+    .form-add button {
+        width: 100%; /* Campos ocupam toda a largura */
+    }
+
+    table {
+        font-size:8px; /* Fonte menor na tabela */
+        width: 100%; /* Tabela ocupa toda a largura */
+        
+    }
+}
+
+/* Para Tablets (481px até 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 15px; /* Fonte ligeiramente maior que celulares */
+    }
+
+    h1, h2 {
+        font-size: 2em; /* Ajuste do tamanho do título */
+    }
+
+    table {
+        font-size: 14px; /* Aumenta o tamanho da tabela */
+    }
+
+    .form-add {
+        flex-direction: row; /* Campos lado a lado */
+        flex-wrap: wrap; /* Ajusta para caber na tela */
+    }
+
+    .form-add input,
+    .form-add select {
+        flex: 1 1 45%; /* Campos ocupam 45% da largura */
+        margin: 5px; /* Espaçamento entre eles */
+    }
+
+    button {
+        flex: 1 1 100%; /* Botão ocupa 100% da largura */
+    }
+}
+
+/* Para iPads e Notebooks (769px até 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 16px; /* Tamanho de fonte padrão */
+    }
+
+    h1, h2 {
+        font-size: 2.5em; /* Maior destaque para títulos */
+    }
+
+    table {
+        width: 80%; /* Tabela ocupa 80% da largura */
+        font-size: 15px;
+    }
+
+    .form-add input,
+    .form-add select {
+        flex: 1 1 40%; /* Ajuste dos campos no formulário */
+    }
+
+    button {
+        width: auto; /* Botão ajusta à largura do conteúdo */
+    }
+}
+
+/* Para Computadores e Monitores Grandes (acima de 1025px) */
+@media (min-width: 1025px) {
+    body {
+        font-size: 18px; /* Fonte maior */
+    }
+
+    .container {
+        max-width: 1200px; /* Largura máxima da área de conteúdo */
+    }
+
+    table {
+        width: 70%; /* Centraliza e reduz a largura da tabela */
+        margin: 20px auto;
+        font-size: 16px;
+    }
+}
