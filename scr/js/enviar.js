@@ -6,6 +6,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async (event)
     const idade = document.getElementById('numberAluno').value;
     const email = document.getElementById('emailAluno').value;
     const modalidade = document.getElementById('modalidadeAluno').value;
+    const url = document.getElementById("addImagem").value;
     
     
     if (!nome || !idade || !email || !modalidade) {
@@ -18,7 +19,8 @@ document.getElementById('cadastroForm').addEventListener('submit', async (event)
         nome,
         idade,
         email,
-        modalidade
+        modalidade,
+        url
     };
 
     // Envia os dados para o servidor
@@ -32,7 +34,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async (event)
         });
         
         if (response.ok) {
-            console.log("Cadastro realizado com sucesso!");
+            console.log(aluno);
             alert("Aluno cadastrado com sucesso!");
             // Aqui você pode adicionar um código para limpar o formulário ou mostrar uma mensagem de sucesso
             document.getElementById('cadastroForm').reset(); // Limpa o formulário após o envio

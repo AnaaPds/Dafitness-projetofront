@@ -22,15 +22,30 @@ const tableBody = document.querySelector("table tbody");
         alunos.forEach((aluno) => {
             const novaLinha = document.createElement("tr");
 
-            novaLinha.innerHTML = `
+            if(aluno.url == null){
+                novaLinha.innerHTML = `
                 <td>${tableBody.children.length + 1}</td>
                 <td>${aluno.nome}</td>
+                <td><img src="scr/image/semfoto.png"></td>
                 <td>${aluno.idade}</td>
                 <td>${aluno.email}</td>
                 <td>${aluno.modalidade}</td>
                 <td><a href ="/edit.html"><button class="btn-edit" id="btn-edit"><img src="./scr/image/editar.png" alt="Editar" data_edit="${aluno.id}"></button></a></td>
                 <td><button class="btn-delete" data_del="${aluno.id}"><img src="./scr/image/lixeira.png" alt="Excluir"></button></td>
             `;
+            }else{
+                novaLinha.innerHTML = `
+                <td>${tableBody.children.length + 1}</td>
+                <td>${aluno.nome}</td>
+                <td><img src="${aluno.url}"></td>
+                <td>${aluno.idade}</td>
+                <td>${aluno.email}</td>
+                <td>${aluno.modalidade}</td>
+                <td><a href ="/edit.html"><button class="btn-edit" id="btn-edit"><img src="./scr/image/editar.png" alt="Editar" data_edit="${aluno.id}"></button></a></td>
+                <td><button class="btn-delete" data_del="${aluno.id}"><img src="./scr/image/lixeira.png" alt="Excluir"></button></td>
+            `;
+            }
+    
 
         
             tabela.querySelector("tbody").appendChild(novaLinha);

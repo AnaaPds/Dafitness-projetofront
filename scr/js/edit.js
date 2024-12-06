@@ -39,7 +39,7 @@ function editData(id) {
       document.getElementById('age').value = data.idade;
       document.getElementById('email').value = data.email;
       document.getElementById('modality').value = data.modalidade;
-
+   
       // Adicionar um evento para o formulário ao ser enviado
       document.getElementById('formulario-edicao').onsubmit = function(event) {
         event.preventDefault(); // Evitar o envio padrão do formulário
